@@ -5,6 +5,8 @@
 #[macro_use]
 extern crate tracing;
 
+// For test commit
+
 use std::{fmt::Write, path::PathBuf, process::exit, str::FromStr, sync::Arc};
 
 use alkahest_pm::PACKAGE_MANAGER;
@@ -62,9 +64,9 @@ struct ApplicationArgs {
     low_res: bool,
 
     #[arg(long)]
+
     fullscreen: bool,
 }
-
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     util::fix_windows_command_prompt();
